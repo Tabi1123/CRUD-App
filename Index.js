@@ -1,7 +1,7 @@
-// Sample array to hold user data
+// Sample array to hold user data ...
 let users = [];
 
-// Function to render users
+// Function to render users ...
 function renderUsers() {
   $('#users').empty(); // Clear previous list
   users.forEach(user => {
@@ -15,7 +15,7 @@ function renderUsers() {
   });
 }
 
-// Function to add a user
+// Function to add a user ...
 $('#add').click(function() {
   const name = $('#name').val();
   const email = $('#email').val();
@@ -29,14 +29,14 @@ $('#add').click(function() {
   }
 });
 
-// Function to delete a user
+// Function to delete a user ...
 $(document).on('click', '.delete', function() {
   const id = $(this).closest('li').data('id');
   users = users.filter(user => user.id !== id);
   renderUsers();
 });
 
-// Function to edit a user
+// Function to edit a user ...
 $(document).on('click', '.edit', function() {
   const id = $(this).closest('li').data('id');
   const user = users.find(user => user.id === id);
